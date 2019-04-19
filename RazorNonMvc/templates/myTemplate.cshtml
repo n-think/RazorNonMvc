@@ -1,0 +1,17 @@
+@inherits Westwind.RazorHosting.RazorTemplateFolderHost<RazorNonMvc.MyModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+@{
+    for (int i = 0; i < 3; i++)
+    {
+        @Model.String @Model.Int
+    }
+}
+</body>
+</html>
