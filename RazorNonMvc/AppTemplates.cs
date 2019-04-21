@@ -46,6 +46,7 @@ namespace RazorNonMvc
         public static void StopRazorHost()
         {
             RazorHost?.Stop();
+            RazorHost = null;
         }
     }
 }

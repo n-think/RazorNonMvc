@@ -1,17 +1,114 @@
-@inherits Westwind.RazorHosting.RazorTemplateFolderHost<RazorNonMvc.MyModel>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<html>
+<head> 
+		<meta charset="utf-8" /> 
+	 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	 <title>Westwind.RazorHosting Template Engine - Westwind.RazorHosting Template Engine</title>	 
+	 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+	 <!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js#startOpened,overrideConsole"></script> -->
+	<link rel="stylesheet" type="text/css" href="templates/scripts/bootstrap/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" type="text/css" href="templates/scripts/fontawesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="templates/wwhelp.css" />
+
+	 	<script src="templates/scripts/jquery/jquery.min.js"></script>	
+
+		 <script src="templates/scripts/highlightjs/highlight.pack.js"></script>
+	 <link href="templates/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+
+	<script src="templates/scripts/ww.jquery.min.js"></script>
+	<script src="templates/scripts/wwhelp.js"></script>
+
+	<topictype value="INDEX" />		  
+	<script>		  
+	$(document).ready( function() {
+		helpBuilder.initializeLayout();		  
+		// expand all top level topics
+		setTimeout( helpBuilder.tocExpandTop, 5);
+	});
+	</script>
 </head>
 <body>
-@{
-    for (int i = 0; i < 3; i++)
-    {
-        @Model.String @Model.Int
-    }
-}
+
+<div class="flex-master">
+	<div class="banner">
+
+		<div class="pull-right sidebar-toggle">
+			<i class="fa fa-bars"
+			   title="Show or hide the topics list"></i>
+		</div>
+		<img src="images/logo.png" class="banner-logo" />
+
+		<div class="projectname">Westwind.RazorHosting Template Engine</div>
+		<div class="byline">
+			<img src="bmp/INDEX.png">&nbsp;Westwind.RazorHosting Template Engine
+		</div>
+	</div>
+
+	<div class="page-content">
+		<div id="toc" class="sidebar-left toc-content">					 
+			<nav class="visually-hidden">
+				<a href="tableofcontents.htm">Table of Contents</a>
+			</nav>
+		</div>
+
+		<div class="splitter">					 
+		</div>
+
+		<nav class="topic-outline">
+			<div class="topic-outline-header">On this page:</div>
+			<div class="topic-outline-content"></div>
+		</nav>
+
+		<div class="main-content">
+			<!-- Rendered Content -->
+			<article class="content-pane">								
+
+
+
+				<div class="content-body"><p id="pragma-line-0">This open source library allows you to host the Razor template engine found in ASP.NET MVC and ASP.NET WebPages in your own applications and ASP.NET applications outside of MVC and Web Pages.</p>
+					<p id="pragma-line-2">Razor is a great tool for text templating using HTML like syntax mixed with C# code. The engine can be used for things like text merging for things like Mail Merge operations, HTML reports or HTML displays in desktop applications, code generation and much more. You can use it in Desktop applications as well as in any ASP.NET application that doesn't already have ready access to the Razor View engine.</p>
+					<ul id="pragma-line-4">
+						<li id="pragma-line-4"><a href="https://github.com/RickStrahl/Westwind.RazorHosting" target="top">Westwind.RazorHosting on GitHub</a></li>
+						<li id="pragma-line-5"><a href="http://nuget.org/packages/Westwind.RazorHosting" target="top">Install from NuGet (Westwind.RazorHosting)</a></li>
+						<li id="pragma-line-6"><a href="http://www.west-wind.com/wwThreads/default.asp?Forum=West+Wind+.NET+Tools+and+Demos" target="top">Questions and Discussion of Westwind.RazorHosting</a></li>
+					</ul>
+					<blockquote id="pragma-line-9">
+						<h4 id="icon-warning-razor-is-not-mvc"><a id="pragma-line-9"></a><i class="fa fa-warning"></i> Razor is not MVC!</h4>
+						<p id="pragma-line-10">The RazorHosting engine provides <strong>core templating functionality</strong> of the Razor sytnax engine. This means that all C# language features and all of Razor's basic expression and logic parsing features work. However, it <strong>does not provide full parity with either the MVC or WebPages</strong> implementation, since both of these engines are closely tied to ASP.NET semantics. Things like HTML and URL Helpers, Sections and Layout pages are not supported. Partials are supported only in the Folder Host implementation</p>
+					</blockquote>
+					<blockquote id="pragma-line-12">
+						<h4 id="icon-warning-csharp-only"><a id="pragma-line-12"></a><i class="fa fa-warning"></i> CSharp Only</h4>
+						<p id="pragma-line-13">RazorHosting only supports C# - there's no support for Visual Basic at this time. The stock Razor engine works with C# 5.0 out of the box. In order to use the latest C# features <a href="_57w1au9jw.htm" >additional configuration has to be done</a>.</p>
+					</blockquote>
+				</div>
+				@inherits Westwind.RazorHosting.RazorTemplateFolderHost<RazorNonMvc.MyModel>
+				@{
+					for (int i = 0; i < 3; i++)
+					{
+						@Model.String
+						@Model.Int
+					}
+				}
+			</article>
+
+			<hr />
+			<div class="pull-right">
+				<a href="https://helpbuilder.west-wind.com" target="_blank"><img src="images/wwhelp.png" /></a>
+			</div>
+
+			<small>
+				&copy; West Wind Technologies, 2018 &bull;
+				Updated: 06/07/18
+				<br />
+				<a href="mailto:support@yoursite.com?subject=Westwind.RazorHosting Template Engine (INDEX     )&body=Topic: Westwind.RazorHosting Template Engine - http://yoursite.com/docs/INDEX     .htm">Comment or report problem with topic</a>
+			</small>
+			<br class="clearfix" />
+			<br />
+			<!-- End Rendered Content -->
+		</div>
+	</div>		  
+</div>
+
 </body>
 </html>
