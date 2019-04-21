@@ -9,8 +9,9 @@ namespace RazorNonMvc
         {
             var watch = new Stopwatch();
             watch.Start();
+            RazorHandler.StartRazorHost(new[] {typeof(MyModel),typeof(MyModel)});
 
-            var result = AppTemplates.RenderTemplate("myTemplate.cshtml", new MyModel() {String = "asd", Int = 3},
+            var result = RazorHandler.RenderTemplate("myTemplate.cshtml", new MyModel() {String = "asd", Int = 3},
                 out string error);
             Console.WriteLine("ms: " + watch.ElapsedMilliseconds + "; ticks: " + watch.ElapsedTicks);
             Console.WriteLine(result);
@@ -34,7 +35,7 @@ namespace RazorNonMvc
 
             var model = new MyModel() {String = "asda", Int = 5};
             Console.WriteLine("test 3");
-            result = AppTemplates.RenderTemplate("myTemplate.cshtml", model,
+            result = RazorHandler.RenderTemplate("myTemplate.cshtml", model,
                 out error);
             Console.WriteLine("ms: " + watch.ElapsedMilliseconds + "; ticks: " + watch.ElapsedTicks);
             Console.WriteLine(result);
